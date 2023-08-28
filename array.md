@@ -14,7 +14,7 @@ So if any array has the maximum index of 5 it is easy to understand that the tot
 
 ### Defining an array:- 
 `
-let arr = [1,5,4,8,6,3]  
+arr = [1,5,4,8,6,3]  
 `
 
 ### Accessing random element:- 
