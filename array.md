@@ -21,8 +21,7 @@ let arr = [1,5,4,8,6,3]
 
 `
 arr[0]      // output 1  
-`  
-`
+
 arr[3]      //output 8
 `
 
