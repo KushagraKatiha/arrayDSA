@@ -21,7 +21,15 @@ let arr = [1,5,4,8,6,3]
 
 `
 arr[0]      // output 1  
+`
+
+`
 arr[3]      //output 8
 `
+
+`
+To access last element of an array:-  arr[n-1]    (where n = total number of elements in an array)
+`
+
 
 
