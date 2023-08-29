@@ -31,5 +31,16 @@ arr[3]      //output 8
 To access last element of an array:-  arr[n-1]    (where n = total number of elements in an array)
 `
 
+## Accessing Memory address of an array
+
+Suppose we have an array as `arr = [1,2,3,4,5,6]` and memory address of the element of very first index is 1000 i.e. `address of arr[0] is 1000` so the address of the random element in the array will be `base address + (i - lower bound of and index) * size of element`  
+`
+where i = index of the element whose address is required, 
+`   
+So in our case if we want to calculate the address of "3" 
+`
+address of 3 => 1000 + (2-0) * 4 = "1008"
+`
+
 
 
