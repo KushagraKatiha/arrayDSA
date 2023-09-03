@@ -42,5 +42,16 @@ So in our case if we want to calculate the address of "3"
 address of 3 => 1000 + (2-0) * 4 = "1008"
 `
 
+# The 2D Array 
 
+There exists the concept of 2D array or we can say "Two Dimensional Array" and they can be seen as :- 
 
+1 2 3  
+4 5 6  
+7 8 9
+
+but in the memory there is no such concept of two dimensions in the memory the 2D array will be stored as that of 1D array ( normal array ) only. 
+ 
+`ex:- 1 2 3 4 5 6 7 8 9`
+
+and to access the memory address of any of the element we use the same method that we use in the normal array. 
