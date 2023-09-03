@@ -54,4 +54,23 @@ but in the memory there is no such concept of two dimensions in the memory the 2
  
 `ex:- 1 2 3 4 5 6 7 8 9`
 
-and to access the memory address of any of the element we use the same method that we use in the normal array. 
+and to access the memory address of any of the element we use the same method that we use in the normal array.
+
+## Accessing the element of 2D array
+
+To access any element of the 2D array we can use the concept of two indices, we can imagine the array as :-
+
+<pre>
+
+   [j] 1 2 3  
+[i]   
+ 1     0 5 6    
+ 2     7 8 9  
+ 3     7 9 6
+</pre>
+
+j be the index of the column and i be the index of row and to access any specific element of the 2D matrix we use the syntax written below
+
+`arr[i][j]`  
+ex:- To access 0 from the above matrix we can write:-   
+`arr[1][1]`
