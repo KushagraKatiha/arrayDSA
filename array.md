@@ -74,3 +74,150 @@ j be the index of the column and i be the index of row and to access any specifi
 `arr[i][j]`  
 ex:- To access 0 from the above matrix we can write:-   
 `arr[1][1]`
+
+# Linear Search 
+Linear search means to search a given element in the array linearly , suppose we have an array :-  
+`arr = [1,5,6,2,8,9]`  
+and we have to search for the element "6" in the array, now if the element is present in array linear search algorithm will provide the index of that element and if not it will provide "-1" which will indicate that the element is not present in the array.   
+
+<pre>
+def linearSearch(arr, x):
+    for i in range(len(arr)):
+        if arr[i] == x:
+            return i
+    return -1
+</pre>  
+
+the above function defines the linear search now, if we want to search for "6" we will call the function will respective parameters
+
+<pre>
+   x = 6
+   result = linearSearch(arr, x)
+   print("Element is present at index:- ", result)
+
+   // output:- Element is present at index 2
+</pre>
+
+## Time complexity 
+The time complexity of the linear search is O(n) as we are using only single for loop and in the worst case it will traverse the whole array. 
+
+# Binary Search 
+In binary search we the divide and conqure approach in order to search for the given element. 
+We divide the array into two sub-arrays from the middle of the array.  
+
+**Binary search is used on the array which is already sorted  
+
+### The below example will help you uderstand the full concept of the binary search
+
+Suppose we have an array:-   
+`arr = [2,5,6,9,11,45,100,205,300]` 
+
+### Problem Statement:- 
+In the given array we have to find if the element "x=205 is present in the array, if yes print the index of the element else print "-1".  
+(Note:- Solve the problem using binary search only)
+### Solution:-   
+To use binary search:-   
+Step 1 => Check if the array is sorted or not.  
+Step 2 => Find the index of the middle element  
+<pre>
+    suppose i be the lower index,
+    suppose j be the upper index i.e. len(arr)-1
+    therefore, mid = i + (j-i)//2 (will provide the mid index)
+
+    i = 0
+    j = 8
+    mid = 4
+</pre>
+
+`Note:- we do not use i+j // 2 in order to find the mid index as it can cause the problem of overflow if the values of i and j are too large`
+
+Step 3 => Compare the element with the "arr[mid]", 
+<pre>
+    if "arr[mid] == x" return mid
+    elif "arr[mid] > x", apply binary search in left sub-array, now (j=mid-1)
+    else apply binary search in right sub-array, now (i=mid+1)
+</pre>
+
+Step 4 => Debugging the code 
+<pre>
+arr = [2,5,6,9,11,45,100,205,300]
+x = 205
+mid = 4
+i = 0
+j = 8
+
+    arr[mid] = 11     // which is not equal to x
+    arr[mid] < x      // now we have to search RSA
+
+    right sub-array => [45,100,205,300]
+      (i=mid+1)
+
+i = 5
+j = 8
+mid = 6 
+
+    again applying binary search
+    arr[mid] = 100    // which is not equal to x
+    arr[mid] < x      //now we have to search RSA
+
+    right sub-array => [205,300]
+      (i=mid+1)
+
+i = 7
+j = 8
+mid = 7
+
+    again applying binary search
+    arr[mid] = 205    // which is equal to x
+    return mid i.e. 
+</pre>
+
+This example must have helped you understanding the concept of binary search, try finding some other element with the same steps.
+
+## Coding Implementation
+### Coding implementaion using recursion
+
+<pre>
+    def binarySearch(arr, lb, ub, x):
+    while lb<=ub:
+        mid = lb + (ub-lb) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] > x:
+            return binarySearch(arr, lb, mid-1, x)
+        elif arr[mid] < x:
+            return binarySearch(arr, mid+1, ub, x)
+
+arr = [1,2,3,4,5,6,8]
+lb = 0
+ub = len(arr)-1
+x = 5
+
+binaryResult = binarySearch(arr, lb, ub, x)
+
+print(binaryResult)
+</pre>
+
+
+### Coding implementaion without using recursion
+
+<pre>
+  def binarySearch(arr, lb, ub, x):
+    while lb<=ub:
+        mid = lb + (ub-lb) // 2
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] > x:
+            ub = mid - 1
+        elif arr[mid] < x:
+            lb = mid + 1
+
+arr = [1,2,3,4,5,6,8]
+lb = 0
+ub = len(arr)-1
+x = 5
+
+binaryResult = binarySearch(arr, lb, ub, x)
+
+print(binaryResult)
+</pre>
