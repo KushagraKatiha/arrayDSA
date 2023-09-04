@@ -20,8 +20,6 @@ def binarySearch(arr, lb, ub, x):
             return binarySearch(arr, mid+1, ub, x)
 
 
-
-
 arr = [1,2,3,4,5,6,8]
 
 lb = 0
