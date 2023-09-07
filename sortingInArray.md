@@ -50,3 +50,30 @@ Radix Sort
 Bucket Sort
 </pre>
 
+## Stable vs Unstable Sorting
+
+While moving further these are some key points that we have to keep in mind, here we will discuss about stable vs unstable sorting.   
+
+<pre>
+Explaing the stable and unstable sorting might be quite complicated so here I'll be using an example to illustrate that what does stable and unstable sorting actually means  
+
+    Suppose we have an array=> arr = [1,5,6(a),8,4,2,6(b)] 
+
+Here we can se we have two 6(s), for our convenience I have marked the first 6 as 6(a) and second 6 as 6(b)
+</pre>
+
+Now if use any sorting method and we get the final sorted array as:  
+
+`arr = [1, 2, 4, 5, 6(b), 6(a), 8]`  
+
+What do you think which type of sorting is this ??  
+
+I think everyone have guessed it right the original order of both the 6(s) have changed and it makes the sorted array unstable and it is the only difference between stable and unstable sorting. (try to make stable sorted array from the above example.)
+
+After this discussion we can say that:   
+<pre>
+In "Stable Array" the original order of the elements (if more than one element of same vale exists) do not get changed after sorting while in "Unstable Array" the original order of the elements get changes after sorting the array.
+</pre>
+
+I hope from the above example you have understood, what stable and unstable sorting is and what's the major difference between them. 
+
