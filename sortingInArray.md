@@ -77,3 +77,20 @@ In "Stable Array" the original order of the elements (if more than one element o
 
 I hope from the above example you have understood, what stable and unstable sorting is and what's the major difference between them. 
 
+## Inplace vs Outplace Sorting
+
+We can understand both the terms with their defination which says that =>  
+
+<pre>
+Inplace Sorting Algorithm :
+     An in-place algorithm is an algorithm that does not need an extra space and produces an output in the same memory that contains the data by transforming the input ‘in-place’. However, a small constant extra space used for variables is allowed.
+</pre>
+
+So in-place sorting does not need any extra space in the memory and sort the array within the memory which is allocated to the original array
+
+<pre>
+Outplace Sorting Algorithm :
+    An out-place algorithm is an algorithm that needs an extra space in order to produce the output, hence the name is "out-place". 
+</pre>
+
+So out-place sorting needs an extra space in the memory and sort the array using the extra space that is allocated to program.
