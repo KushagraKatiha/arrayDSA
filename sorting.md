@@ -149,7 +149,12 @@ Generally saying p = n-1
 Comparisions in worst case => n + (n-1) + (n-2) + ...... + 3 + 2 + 1
 which is nothing else but sum of n natural numbers i.e. {n(n+1)}/2
 
-So the time complexity will be => O(n^2)                                          
+Comparisons in worst case => O(n^2)  
+Similarly, Swaps in worst case => O(n^2)            
+
+Time Complexity = Comparison + Swaps
+O(n^2)          =  O(n^2)   +  O(n^2) 
+
 And since we are using no extra space , space complexity will be => O(1) {constant}      
 </pre>
 
