@@ -13,9 +13,6 @@ def insertionSort(arr):
     return arr        
 
 
-
-
-
 ## Driver Code
 arr = [9, 5, 1, 4, 3]
 
