@@ -181,3 +181,146 @@ print("After applying bubble  =>",bSortResult)
 
 ## Selection Sort
 
+Illustration => We have to sort the given array into increasing order using bubble sort
+<pre>
+Array => arr = [70, 20, 50, 30, 90, 4, 15] 
+</pre>
+
+#### Working of Bubble Sort
+
+Unlike in bubble sort , in selection sort we don't compare element with adjacent element but we make an variable to store the index of the smallest element present in array. Let's see how do we do this:
+
+<pre>
+<pre>
+
+Pass Number (n) = 0
+
+arr = [70, 20, 50, 30, 90, 4, 15]
+</pre>
+<b>min_idx = n</b> 
+
+Now we will compare arr[mid_idx] is less than any other element in array if yes then we will update the value of "min_idx" to the index of that element and after comparing with all the elements we will make a swap within the array
+
+arr[min_idx] = 70 
+arr[1] = 20 
+
+arr[1] < arr[min_idx], we will now update the value of min_idx with 1
+
+<b>min_idx = 1</b>
+arr[min_idx] = 20
+arr[2] = 50 
+
+arr[2] > arr[min_idx], leave it as it is 
+
+arr[3] = 30
+
+arr[3] > arr[min_idx], leave it as it is
+
+arr[4] = 90
+
+arr[4] > arr[min_idx], leave it as it is
+
+arr[5] = 4
+
+arr[5] < arr[min_idx], update the value of min_idx
+<b>min_idx = 5</b>
+
+arr[min_idx] = 4
+arr[6] = 15
+
+arr[6] > arr[min_idx], leave it as it is
+
+After traversing whole array and comparing we got <b>min_idx = 5</b> , now we have to swap arr[min_idx] with arr[n] , so we will be getting the smallest number at very first index i.e. 0
+
+</pre>
+
+So after zeroth pass `arr = [4, 20, 50, 30, 90, 70, 15]`  
+
+We will repeate the complete process as we done above but as we have got smallest element at very first first index i.e. 0 we will now start comparision from 1 (or we will start traversing with number of index same as that of pass)
+
+<pre>
+<pre>
+Pass Number (n) = 1
+
+arr = [4, 20, 50, 30, 90, 70, 15]
+</pre>
+
+As done above, 
+
+arr[min_idx] = 20
+arr[2] = 50  
+
+arr[2] > arr[min_idx], leave it as it is
+
+arr[3] = 30 
+
+arr[3] > arr[min_idx], leave it as it is 
+
+arr[4] = 90
+
+arr[4] > arr[min_idx], leave it as it is
+
+arr[5] = 70
+
+arr[5] > arr[min_idx], leave it as it is
+
+arr[6] = 15
+
+arr[6] < arr[min_idx], update the value of min_idx
+
+<b>min_idx = 6</b>
+
+
+After traversing whole array and comparing we got <b>min_idx = 6</b> , now we have to swap arr[min_idx] with arr[n] , so we will be getting the smallest number at very first index i.e. 1 (in this case)
+
+
+</pre>
+
+So after first pass `arr = [4, 15, 50, 30, 90, 70, 20]`
+
+We can here see that after completing two passes we got first two element sorted, after x = len(arr) passes we will get the complete sorted array try doing the futher steps yourself to get more clarity on the topic:  \
+
+Final sorted array: `arr = [4, 15, 20, 30, 50, 70, 90]`
+
+### Digramatic Understanding
+
+<pre>
+<pre>
+arr = [70, 20, 50, 30, 90, 4, 15]
+</pre>
+
+In Zeroth Pass => arr = [70, 20, 50, 30, 90, 4, 15]           N
+                          _   _   _   _   _  _   _
+
+In First Pass => arr = [4, 20, 50, 30, 90, 70, 15]            N-1
+                            _   _   _   _   _   _
+
+In Second Pass => arr = [4, 15, 50, 30, 90, 70, 20]           N-2
+                                 _   _   _   _   _
+
+In Third Pass => arr = [4, 15, 20, 30, 90, 70, 50]            N-3
+                                    _   _   _   _
+
+In Fourth Pass => arr = [4, 15, 20, 30, 90, 70, 50]            3
+                                         _   _   _
+
+In Fifth Pass => arr = [4, 15, 20, 30, 50, 70, 90]             2
+                                            _   _ 
+
+In Sixth Pass => arr = [4, 15, 20, 30, 50, 70, 90]             1
+                                                _
+</pre>
+
+### We can observe that 
+
+<pre>
+Swaps => We have N-1 number of passes, and in worst case at every pass we are having one swap
+therefore, we will have total number or swaps = O(N)
+
+Comparisons => starting with N elements we will have N-1 elements then N-2 elements and so on till 1
+therefore, total number of comparisons = {N(N+1)}/2 = O(N^2)
+
+Here Time Complexity = O(N) + O(N^2) => O(N^2)
+</pre>
+
+Both bubble sort and Selection sort have time complexities of O(N^2), so the only difference in both or them is of approach we are using in both the sorting methods.
