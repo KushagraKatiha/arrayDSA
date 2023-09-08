@@ -176,3 +176,8 @@ print("After applying bubble  =>",bSortResult)
 
 // Output : After applying bubble  => [5, 15, 20, 30, 50, 70, 90]
 </pre>
+
+
+
+## Selection Sort
+
