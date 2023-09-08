@@ -199,7 +199,8 @@ arr = [70, 20, 50, 30, 90, 4, 15]
 </pre>
 <b>min_idx = n</b> 
 
-Now we will compare arr[mid_idx] is less than any other element in array if yes then we will update the value of "min_idx" to the index of that element and after comparing with all the elements we will make a swap within the array
+Now we will compare arr[mid_idx] is less than any other element in array if yes then we will update the value of "min_idx" 
+to the index of that element and after comparing with all the elements we will make a swap within the array
 
 arr[min_idx] = 70 
 arr[1] = 20 
@@ -230,13 +231,15 @@ arr[6] = 15
 
 arr[6] > arr[min_idx], leave it as it is
 
-After traversing whole array and comparing we got <b>min_idx = 5</b> , now we have to swap arr[min_idx] with arr[n] , so we will be getting the smallest number at very first index i.e. 0
+After traversing whole array and comparing we got <b>min_idx = 5</b> , now we have to swap arr[min_idx] with arr[n] , 
+so we will be getting the smallest number at very first index i.e. 0
 
 </pre>
 
 So after zeroth pass `arr = [4, 20, 50, 30, 90, 70, 15]`  
 
-We will repeate the complete process as we done above but as we have got smallest element at very first first index i.e. 0 we will now start comparision from 1 (or we will start traversing with number of index same as that of pass)
+We will repeate the complete process as we done above but as we have got smallest element at very first first 
+index i.e. 0 we will now start comparision from 1 (or we will start traversing with number of index same as that of pass)
 
 <pre>
 <pre>
