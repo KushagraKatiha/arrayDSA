@@ -1,4 +1,4 @@
-arr = [3,3,4]
+arr = [3,3,2]
 
 # def majorityElement(arr):
 #     max_count = 0
@@ -32,6 +32,8 @@ def BoyerMajorityElement(arr):
     for i in range(len(arr)):
         if count == 0:
             candidate = arr[i]    
+        print("candidate is:", candidate)
+        print("Count is: ", count)
         count += (1 if candidate == arr[i] else -1)
     return candidate
 
