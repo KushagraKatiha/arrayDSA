@@ -324,3 +324,8 @@ Here Time Complexity = O(N) + O(N^2) => O(N^2)
 </pre>
 
 Both bubble sort and Selection sort have time complexities of O(N^2), so the only difference in both or them is of approach we are using in both the sorting methods.
+
+
+
+
+Here we learned basic array sorting methods
